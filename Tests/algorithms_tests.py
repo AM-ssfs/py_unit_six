@@ -3,8 +3,6 @@ import algorithms
 
 
 class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, False)  # add assertion here
 
     def test_add_numbers_1(self):
         sample = [1, 2, 3, 4, 5, -5, -4, -3, -2, -1]

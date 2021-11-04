@@ -4,7 +4,10 @@ def swap(list_one):
     :param list_one: a list of at least two elements
     :return: the same list with the first and last elements swapped
     """
-    pass # make sure to remove this line before beginning work on this function
+    a = list_one[0]
+    list_one[0] = list_one[len(list_one)-1]
+    list_one[len(list_one)-1] = a
+    return list_one
 
 
 def rotate_left(list_one):
@@ -13,7 +16,11 @@ def rotate_left(list_one):
     :param list_one: A list consisting of exactly three integers
     :return: a list where all the elements have been shifted 1 place to the left
     """
-    pass # make sure to remove this line before beginning work on this function
+    a = list_one[0]
+    for x in len(list_one):
+        list_one[x] = list_one[x+1]
+    list_one[len(list_one-1)] = a
+    return list_one
 
 
 def max_end(list_one):
@@ -23,4 +30,14 @@ def max_end(list_one):
     :param list_one: A list consisting of three elements - all integers
     :return: A list where all the elements are the larger of the first or last element of the original list
     """
-    pass # make sure to remove this line before beginning work on this function
+    a = list_one[0]
+    b = list_one[len(list_one-1)]
+    if a >= b:
+        for x in len(list_one):
+            list_one[x] = a
+    elif b > a:
+        for x in len(list_one):
+            list_one[x] = b
+    return list_one
+
+
