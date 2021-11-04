@@ -1,3 +1,4 @@
+import time
 def get_numbers():
     '''
     takes a number as a parameter and returns a list starting at 2 up to and including the number.
@@ -20,6 +21,11 @@ def get_numbers():
 
 
 def get_primes(numbers):
+    '''
+    takes
+    :param numbers:
+    :return:
+    '''
     primes = []
     while True:
         checking = numbers[0]
@@ -30,15 +36,17 @@ def get_primes(numbers):
                 numbers.remove(numbers[x])
             else:
                 x += 1
-        print(numbers)
+        # print(numbers) # do this to see each
         if len(numbers) == 0:
             return primes
 
 
 def main():
     numbers = get_numbers()
+    start_time = time.time()
     primes = get_primes(numbers)
     print(primes)
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 
 if __name__ == '__main__':
